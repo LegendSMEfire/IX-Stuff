@@ -14,6 +14,23 @@ ENT.AdminOnly		= true;
 ENT.Model			= Model("models/hunter/blocks/cube025x025x025.mdl");
 ENT.RenderGroup 	= RENDERGROUP_BOTH;
 
+-- if you want to have the helix UI looking at the checkpoint, then remove the --[[ ]]--
+--[[
+ENT.PopulateEntityInfo = true
+
+function ENT:OnPopulateEntityInfo(container)
+ local name = container:AddRow("name")
+  name:SetText("Checkpoint")
+  name:SetText("Checkpoint")
+  name:SizeToContents()
+
+ local desc = container:AddRow("desc")
+ desc:SetText("Checkpoint terminal to capture.")
+ desc:SizeToContents()
+
+ container:SizeToContents()
+end
+--]]
 
 function ENT:Draw()
 
