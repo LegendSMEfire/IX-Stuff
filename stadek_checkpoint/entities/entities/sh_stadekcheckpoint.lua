@@ -21,7 +21,6 @@ ENT.PopulateEntityInfo = true
 function ENT:OnPopulateEntityInfo(container)
  local name = container:AddRow("name")
   name:SetText("Checkpoint")
-  name:SetText("Checkpoint")
   name:SizeToContents()
 
  local desc = container:AddRow("desc")
